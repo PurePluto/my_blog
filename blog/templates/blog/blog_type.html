@@ -1,0 +1,6 @@
+{% extends 'blog/blog_list.html' %}
+{% block title %}{{ category.name }}{% endblock %}
+{% block blog_list_title %}
+    分类：{{ category.name }}(一共有{{ blogs|length }}篇博客)
+    <a href="{% url 'blog_list'  %}">查看所有分类</a>
+{% endblock %}
